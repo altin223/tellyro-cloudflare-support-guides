@@ -11,7 +11,7 @@ Static marketing site for Tellyro (live TV, movies & series), built for Cloudfla
 | `client.html` | Client Area ("coming soon") |
 | `privacy.html`, `terms.html` | Legal pages |
 
-Assets live in `assets/`: `i18n.js` and `legal.js` hold the translations (EN/DE/TR/FR/ES/IT), `help-*.js` power the floating help widget, and `config.js` holds the public config.
+Assets live in `assets/`: `i18n.js` and `legal.js` hold the translations (EN/DE/TR/FR/ES/IT), `help-data.js` holds the installation guide content, and `config.js` holds the public config.
 
 ## Run locally
 
