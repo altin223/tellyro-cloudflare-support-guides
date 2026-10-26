@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /client.html
+Disallow: /admin.html
+Sitemap: https://tellyro.com/sitemap.xml
