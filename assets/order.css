@@ -1,4 +1,4 @@
-:root{color-scheme:dark;--bg:#06112a;--navy:#0f2a5b;--acc:#3ea6ff;--text:#f5f9ff;--mut:#a2b4d0;--line:rgba(155,190,244,.18);--field:rgba(5,13,31,.6);--glass:rgba(255,255,255,.045)}
+﻿:root{color-scheme:dark;--bg:#06112a;--navy:#0f2a5b;--acc:#3ea6ff;--text:#f5f9ff;--mut:#a2b4d0;--line:rgba(155,190,244,.18);--field:rgba(5,13,31,.6);--glass:rgba(255,255,255,.045)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;min-height:100vh;background:radial-gradient(ellipse 70% 36% at 100% 0,rgba(36,108,192,.28),transparent 78%),radial-gradient(ellipse 70% 55% at 0 70%,rgba(23,56,122,.27),transparent 80%),var(--bg);color:var(--text);font:15px/1.6 'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;overflow-x:hidden}
 a{color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
@@ -71,7 +71,7 @@ fieldset.o-sec>legend{float:left;width:100%}fieldset.o-sec>legend+*{clear:both} 
 .next{list-style:none;counter-reset:n;margin:0 0 18px;padding:0;display:grid;gap:10px}
 .next li{counter-increment:n;display:flex;gap:10px;color:#d2e0f5;font-size:13.5px;line-height:1.55}
 .next li:before{content:counter(n);display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:8px;background:rgba(62,166,255,.16);border:1px solid rgba(62,166,255,.4);color:#b6e3ff;font-size:12px;font-weight:800}
-.ts{min-height:70px;margin:0 0 12px;display:flex;justify-content:center}
+.ts{margin:0;display:flex;justify-content:center}
 .o-err{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;padding:12px 14px;border-radius:14px;background:rgba(255,107,107,.1);border:1px solid rgba(255,138,138,.42);color:#ffd0d0;font-size:13.5px;line-height:1.55}
 .o-err svg{flex:none;width:18px;height:18px;margin-top:2px;color:#ff9a9a}.o-err .detail{display:block;margin-top:4px;color:#d9a9a9;font-size:12px}
 /* Buttons */
@@ -125,3 +125,4 @@ footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-betw
  .acts{grid-template-columns:1fr}.done-foot .btn{flex:1 1 100%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.btn:hover{transform:none}}
+

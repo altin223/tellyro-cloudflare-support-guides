@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -428,7 +428,7 @@ function startTrialVerification(){
  const wrapper=$('#trial-turnstile');
  if(!autoTrialReady()){wrapper.hidden=true;return;}
  wrapper.hidden=false;
- wrapper.style.cssText='min-height:70px;margin:8px 0';
+ wrapper.style.cssText='margin:0';
  // Only load the widget when a real public site key exists. Placeholder keys
  // previously rendered a white "Troubleshoot" error inside the trial form.
  const sc=document.createElement('script');
@@ -438,7 +438,7 @@ function startTrialVerification(){
   try{
    if(!window.turnstile)throw Error('Verification unavailable');
    trialWidget=window.turnstile.render('#trial-turnstile',{
-    sitekey:trialConfig.turnstileSiteKey,theme:'dark',
+    sitekey:trialConfig.turnstileSiteKey,theme:'dark',appearance:'interaction-only',
     'error-callback':()=>{trialSecurityError='Security check unavailable. You can send your request through support chat instead.';},
     'expired-callback':()=>showErr('Verification expired. Complete it again before submitting.')
    });
@@ -497,10 +497,11 @@ $('#tf').addEventListener('submit',async e=>{
  e.preventDefault();if(trialSubmitting)return; // guard against double clicks / repeated Enter
  showErr('');const details=validateTrial();if(!details)return;
  if(!autoTrialReady()){showTrialConfirmation(details,{saved:false});return} // backend not configured: nothing is saved
- const token=trialWidget!=null&&window.turnstile?window.turnstile.getResponse(trialWidget):'';
+ // the check runs by itself in the background; give it a few seconds if the visitor was very quick
+ let token='';for(let i=0;i<40&&!token&&!trialSecurityError&&trialWidget!==null;i++){try{token=window.turnstile.getResponse(trialWidget)||''}catch{}if(!token)await new Promise(r=>setTimeout(r,250))}
  if(!token){
   if(trialSecurityError||trialWidget===null)showTrialConfirmation(details,{saved:false}); // verification can't load: send via chat
-  else{showErr('Please complete the security check above, then press Request Free Trial again.');$('#trial-turnstile').scrollIntoView({block:'center',behavior:'smooth'})}
+  else{showErr('The security check is still running. Please press Request Free Trial again in a moment.');$('#trial-turnstile').scrollIntoView({block:'center',behavior:'smooth'})}
   return;
  }
  // label restores the English source text, which i18n re-translates
@@ -582,3 +583,5 @@ add();new MutationObserver(add).observe(document.body,{childList:true,subtree:tr
 <script defer src="assets/i18n.js"></script>
 </body>
 </html>
+
+

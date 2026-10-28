@@ -1,4 +1,4 @@
-/* Purchase / renewal request page. It saves a REQUEST through the backend's public purchase-request
+﻿/* Purchase / renewal request page. It saves a REQUEST through the backend's public purchase-request
    function (Turnstile-checked, insert only). It is not a payment: nothing is charged on this website. */
 (()=>{'use strict';
 const P=window.TELLYRO_PLANS,C=window.TELLYRO_CONFIG||{};if(!P)return;
@@ -152,7 +152,7 @@ let wid=null,secErr=false;
 function startVerification(){if(!ready())return;const box=$('#o-ts');box.hidden=false;
  const sc=document.createElement('script');sc.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';sc.async=true;
  sc.onload=()=>{try{if(!window.turnstile)throw Error('unavailable');
-  wid=window.turnstile.render(box,{sitekey:C.turnstileSiteKey,theme:'dark',language:lang,size:box.clientWidth<300?'compact':'normal',
+  wid=window.turnstile.render(box,{sitekey:C.turnstileSiteKey,theme:'dark',appearance:'interaction-only',language:lang,size:box.clientWidth<300?'compact':'normal',
    'error-callback':()=>{secErr=true},'expired-callback':()=>showErr('eExpired')})}catch{secErr=true;box.hidden=true}};
  sc.onerror=()=>{secErr=true;box.hidden=true};document.head.append(sc)}
 const token=()=>{try{return wid!=null&&window.turnstile?window.turnstile.getResponse(wid)||'':''}catch{return ''}};
@@ -163,7 +163,7 @@ form.addEventListener('submit',async e=>{
  e.preventDefault();if(busy)return; // one request at a time: double clicks and repeated Enter are ignored
  showErr('');const v=validate();if(!v)return;
  if(!ready()){showDone(v,{saved:false});return} // backend not configured: nothing is saved, so the customer sends it via chat
- const tk=token();
+ let tk=token();for(let i=0;i<40&&!tk&&!secErr&&wid!=null;i++){await new Promise(r=>setTimeout(r,250));tk=token()} // the check runs by itself; wait a few seconds if the visitor was very quick
  if(!tk){if(secErr||wid==null)showDone(v,{saved:false});else{showErr('eCaptcha');$('#o-ts').scrollIntoView({block:'center',behavior:'smooth'})}return}
  setBusy(true);
  try{
@@ -226,3 +226,4 @@ sel.value=LANGS.includes(first)?first:'en';
 sel.addEventListener('change',()=>{render();const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u)});
 render();startVerification();
 })();
+
