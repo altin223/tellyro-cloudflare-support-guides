@@ -511,13 +511,20 @@ $('#tf').addEventListener('submit',async e=>{
    method:'POST',headers:{'content-type':'application/json','apikey':trialConfig.supabaseAnonKey},body:JSON.stringify({...details,turnstile:token})});
   let result={};try{result=await response.json()}catch{}
   if(response.status===503){showTrialConfirmation(details,{saved:false});return} // requests paused: nothing was saved, use chat
-  if(!response.ok||!result.ok)throw Error(result.error||'');
+  if(!response.ok||!result.ok){const er=Error(result.error||'');er.code=result.code||'';er.retryAfter=Number(result.retry_after)||Number(response.headers.get('retry-after'))||0;throw er}
   const id=[result.id,result.request_id,result.requestId].find(v=>typeof v=='string'&&v.trim()||typeof v=='number');
   showTrialConfirmation(details,{saved:true,requestId:id!=null?String(id).trim():''});
  }catch(err){
   // keep everything the customer typed; let them retry
   if(window.turnstile&&trialWidget!=null)window.turnstile.reset(trialWidget);
-  showErr('We couldn’t save your request. Your details are still filled in. Please try again, or message us on WhatsApp or Telegram.',err.message);
+  if(err.code==='rate_limited'){
+   // a genuine limit: say how long to wait and offer support; the form keeps what was typed
+   const mins=Math.max(1,Math.ceil((err.retryAfter||60)/60));
+   showErr(`Several requests have come from your network. Your details are still filled in. Please try again in about ${mins} minute${mins===1?'':'s'}, or message us now:`);
+   const wa=el('a',0,'WhatsApp'),tg=el('a',0,'Telegram'),w=waUrl(),t=safeUrl(CFG.telegram);
+   for(const [a,u] of [[wa,w],[tg,t]])if(u){a.href=u;a.target='_blank';a.rel='noopener noreferrer'}
+   trialErr.append(document.createTextNode(' '),wa,document.createTextNode(' · '),tg);
+  }else showErr('We couldn’t save your request. Your details are still filled in. Please try again, or message us on WhatsApp or Telegram.',err.message);
  }finally{trialSubmitting=false;button.disabled=false;button.textContent=label}
 });
 CFG.compare.forEach(([f,a,b])=>{const r=el("tr");r.append(el("td",0,f),el("td","us",a),el("td",0,b));$("#ct tbody").append(r)});
