@@ -83,7 +83,13 @@ const S={
  mSaved_renewal:T('Hello Tellyro! I’ve submitted a renewal request.','Hallo Tellyro! Ich habe eine Verlängerungsanfrage gesendet.','Merhaba Tellyro! Bir yenileme talebi gönderdim.','Bonjour Tellyro ! J’ai envoyé une demande de renouvellement.','¡Hola, Tellyro! He enviado una solicitud de renovación.','Ciao Tellyro! Ho inviato una richiesta di rinnovo.'),
  mNew_purchase:T('Hello Tellyro! I’d like to purchase a plan.','Hallo Tellyro! Ich möchte einen Tarif kaufen.','Merhaba Tellyro! Bir paket satın almak istiyorum.','Bonjour Tellyro ! J’aimerais acheter une offre.','¡Hola, Tellyro! Me gustaría comprar un plan.','Ciao Tellyro! Vorrei acquistare un piano.'),
  mNew_renewal:T('Hello Tellyro! I’d like to renew my plan.','Hallo Tellyro! Ich möchte meinen Tarif verlängern.','Merhaba Tellyro! Paketimi yenilemek istiyorum.','Bonjour Tellyro ! J’aimerais renouveler mon offre.','¡Hola, Tellyro! Me gustaría renovar mi plan.','Ciao Tellyro! Vorrei rinnovare il mio piano.'),
- mEnd:T('Please help me arrange payment. Thank you!','Bitte helfen Sie mir bei der Zahlung. Vielen Dank!','Ödeme konusunda yardımcı olur musunuz? Teşekkürler!','Pouvez-vous m’aider à organiser le paiement ? Merci !','¿Me ayudáis a organizar el pago? ¡Gracias!','Potete aiutarmi a organizzare il pagamento? Grazie!')};
+ mEnd:T('Please help me arrange payment. Thank you!','Bitte helfen Sie mir bei der Zahlung. Vielen Dank!','Ödeme konusunda yardımcı olur musunuz? Teşekkürler!','Pouvez-vous m’aider à organiser le paiement ? Merci !','¿Me ayudáis a organizar el pago? ¡Gracias!','Potete aiutarmi a organizzare il pagamento? Grazie!'),
+ offBanner:T('{pct}% renewal discount applied. The price on the right already includes it.','{pct} % Verlängerungsrabatt angewendet. Der Preis rechts enthält ihn bereits.','%{pct} yenileme indirimi uygulandı. Sağdaki fiyata dahildir.','Remise de {pct} % sur le renouvellement appliquée. Le prix à droite l’inclut déjà.','Descuento del {pct} % en la renovación aplicado. El precio de la derecha ya lo incluye.','Sconto del {pct}% sul rinnovo applicato. Il prezzo a destra lo include già.'),
+ offOnly:T('The renewal discount only applies to renewals. Choose “Renewal” above to use it.','Der Verlängerungsrabatt gilt nur für Verlängerungen. Wählen Sie oben „Verlängerung“, um ihn zu nutzen.','Yenileme indirimi yalnızca yenilemeler için geçerlidir. Kullanmak için yukarıdan “Yenileme”yi seçin.','La remise ne s’applique qu’aux renouvellements. Choisissez « Renouvellement » ci-dessus pour en profiter.','El descuento solo se aplica a renovaciones. Elige «Renovación» arriba para usarlo.','Lo sconto vale solo per i rinnovi. Scegli «Rinnovo» qui sopra per usarlo.'),
+ offGone:T('This renewal link is no longer available. It may have been used already, or the account was renewed. You can still send a renewal request at the regular price.','Dieser Verlängerungslink ist nicht mehr verfügbar. Er wurde vielleicht schon verwendet, oder das Konto wurde verlängert. Sie können die Verlängerung weiterhin zum regulären Preis anfragen.','Bu yenileme bağlantısı artık geçerli değil. Daha önce kullanılmış olabilir veya hesap yenilenmiş olabilir. Yenileme talebini normal fiyattan yine de gönderebilirsiniz.','Ce lien de renouvellement n’est plus disponible. Il a peut-être déjà été utilisé, ou le compte a été renouvelé. Vous pouvez toujours envoyer une demande au tarif normal.','Este enlace de renovación ya no está disponible. Puede que ya se haya usado o que la cuenta ya esté renovada. Aun así puedes enviar la solicitud al precio normal.','Questo link di rinnovo non è più disponibile. Potrebbe essere già stato usato oppure l’account è stato rinnovato. Puoi comunque inviare la richiesta al prezzo normale.'),
+ eOffer:T('This renewal offer can’t be applied. It may have been used already, or the account was renewed. The discount was removed: press Submit Request again to send your renewal at the regular price.','Dieses Angebot kann nicht angewendet werden. Es wurde vielleicht schon verwendet, oder das Konto wurde verlängert. Der Rabatt wurde entfernt: Tippen Sie erneut auf „Anfrage senden“, um die Verlängerung zum regulären Preis anzufragen.','Bu yenileme teklifi uygulanamıyor. Daha önce kullanılmış olabilir veya hesap yenilenmiş olabilir. İndirim kaldırıldı: yenilemeyi normal fiyattan göndermek için yeniden “Talebi gönder”e basın.','Cette offre de renouvellement ne peut pas être appliquée. Elle a peut-être déjà été utilisée, ou le compte a été renouvelé. La remise a été retirée : appuyez à nouveau sur « Envoyer la demande » pour envoyer le renouvellement au tarif normal.','No se puede aplicar esta oferta de renovación. Puede que ya se haya usado o que la cuenta ya esté renovada. Se ha quitado el descuento: pulsa de nuevo «Enviar solicitud» para enviar la renovación al precio normal.','Impossibile applicare questa offerta di rinnovo. Potrebbe essere già stata usata oppure l’account è stato rinnovato. Lo sconto è stato rimosso: premi di nuovo «Invia richiesta» per inviare il rinnovo al prezzo normale.'),
+ offOrig:T('Original price','Originalpreis','Orijinal fiyat','Prix d’origine','Precio original','Prezzo originale'),
+ offDisc:T('Discount ({pct}%)','Rabatt ({pct} %)','İndirim (%{pct})','Remise ({pct} %)','Descuento ({pct} %)','Sconto ({pct}%)')};
 const UNITS={en:[['device','devices'],['month','months']],de:[['Gerät','Geräte'],['Monat','Monate']],tr:[['cihaz','cihaz'],['ay','ay']],fr:[['appareil','appareils'],['mois','mois']],es:[['dispositivo','dispositivos'],['mes','meses']],it:[['dispositivo','dispositivi'],['mese','mesi']]};
 const ICON={check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
  chat:'<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
@@ -114,7 +120,13 @@ const ready=()=>/^(https:\/\/[a-z0-9.-]+\.[a-z]{2,}|http:\/\/(localhost|127\.0\.
 /* State: the plan comes from the pricing page link (?type=&devices=&months=) and stays in the URL. */
 const qs=new URLSearchParams(location.search),num=(v,list,def)=>list.includes(Number(v))?Number(v):def;
 const st={type:qs.get('type')==='renewal'?'renewal':'purchase',devices:num(qs.get('devices'),P.devices,1),months:num(qs.get('months'),P.months,12)};
-const price=()=>P.prices[st.devices][st.months];
+/* A renewal link from a reminder email can carry a discount. The page only SHOWS it (same rounding as the server);
+   the server decides the real price from the secret link, never from anything this page sends. */
+const RENEW_RE=/^[A-Za-z0-9_-]{43}$/;let renewToken=qs.get('renew')||'';if(!RENEW_RE.test(renewToken))renewToken='';
+let offer=null,offerGone=false;
+const base=()=>P.prices[st.devices][st.months];
+const disc=()=>offer&&offer.percent>0&&st.type==='renewal'?Math.round(base()*100*offer.percent/100)/100:0;
+const price=()=>Math.round((base()-disc())*100)/100;
 let busy=false,errKey='',errDetail='',lastDone=null;
 
 function opt(name,value,cls,kids){const l=el('label','opt'+(cls?' '+cls:'')),i=el('input');i.type='radio';i.name=name;i.value=String(value);i.checked=st[name]===value;l.append(i,...kids);return l}
@@ -126,6 +138,7 @@ function drawPicker(){
 function update(){
  document.querySelectorAll('#o-months .dur').forEach(l=>{l.querySelector('.dp').textContent=money(P.prices[st.devices][Number(l.querySelector('input').value)])});
  $('#s-type').textContent=tx(st.type);$('#s-plan').textContent=planText(st.devices,st.months);$('#s-price').textContent=money(price());
+ drawOffer();
  $('#w-acct').hidden=st.type!=='renewal';
  const u=new URL(location.href);u.searchParams.set('type',st.type);u.searchParams.set('devices',st.devices);u.searchParams.set('months',st.months);history.replaceState(null,'',u);
 }
@@ -168,20 +181,41 @@ form.addEventListener('submit',async e=>{
  setBusy(true);
  try{
   const r=await fetch(C.supabaseUrl.replace(/\/$/,'')+'/functions/v1/purchase-request',{method:'POST',headers:{'content-type':'application/json','apikey':C.supabaseAnonKey},
-   body:JSON.stringify({request_type:v.type,name:v.name,email:v.email,devices:v.devices,months:v.months,account_reference:v.account,message:v.message,turnstile:tk})});
+   body:JSON.stringify({request_type:v.type,name:v.name,email:v.email,devices:v.devices,months:v.months,account_reference:v.account,message:v.message,turnstile:tk,offer:offer&&st.type==='renewal'?renewToken:undefined})});
   let j={};try{j=await r.json()}catch{}
   if(r.status===503){showDone(v,{saved:false});return} // requests paused in the dashboard: nothing was saved
   if(!r.ok||!j.ok){const x=Error(j.error||'HTTP '+r.status);x.code=j.code;throw x}
   const ref=[j.reference,j.id].find(x=>typeof x=='string'&&x.trim());
-  showDone(v,{saved:true,duplicate:!!j.duplicate,ref:ref?ref.trim():'',price:Number.isFinite(j.price_cents)?j.price_cents/100:v.price});
+  showDone(v,{saved:true,duplicate:!!j.duplicate,ref:ref?ref.trim():'',price:Number.isFinite(j.price_cents)?j.price_cents/100:v.price,disc:j.discount_percent>0?{pct:j.discount_percent,orig:j.original_price_cents/100,amt:j.discount_cents/100}:null});
  }catch(x){
   // everything the customer entered stays in the form; the token is single-use, so it is reset for the retry
   resetTs();const f=FIELD[x.code];
   if(f){setFieldErr(f[0],f[1]);$('#o-'+f[0]).focus();return}
-  const k={invalid_plan:'ePlan',captcha_failed:'eCaptchaBad',rate_limited:'eRate'}[x.code]||'eSave';
+  if(x.code==='offer_invalid'||x.code==='offer_used'){offer=null;offerGone=true;renewToken='';update()} // the discount is removed so the customer can resubmit at the regular price
+  const k={invalid_plan:'ePlan',captcha_failed:'eCaptchaBad',rate_limited:'eRate',offer_invalid:'eOffer',offer_used:'eOffer'}[x.code]||'eSave';
   showErr(k,k==='eSave'?x.message:'');$('#o-err').scrollIntoView({block:'center',behavior:'smooth'});
  }finally{setBusy(false)}
 });
+
+/* Renewal link from an email: ask the server what it contains (it answers only for a valid secret link), then pre-fill. */
+function drawOffer(){const d=disc(),box=$('#s-offer'),ban=$('#o-banner');
+ box.hidden=!d;if(d){$('#s-orig').textContent=money(base());$('#s-disc-l').textContent=tx('offDisc').replace('{pct}',offer.percent);$('#s-disc').textContent='−'+money(d)}
+ let t='',warn=false;
+ if(offerGone){t=tx('offGone');warn=true}else if(offer&&offer.percent>0)t=st.type==='renewal'?tx('offBanner').replace('{pct}',offer.percent):tx('offOnly');
+ ban.hidden=!t;ban.textContent=t;ban.className='o-banner'+(warn?' warn':'')}
+async function loadOffer(){
+ if(!renewToken)return;
+ if(!ready()){offerGone=true;renewToken='';update();return}
+ try{
+  const r=await fetch(C.supabaseUrl.replace(/\/$/,'')+'/functions/v1/purchase-request',{method:'POST',headers:{'content-type':'application/json','apikey':C.supabaseAnonKey},body:JSON.stringify({action:'offer',token:renewToken})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok||!j.ok)throw Error('gone');
+  offer={percent:Number(j.percent)||0,name:j.name,email:j.email,account:j.account};
+  st.type='renewal';if(P.devices.includes(j.devices))st.devices=j.devices;if(P.months.includes(j.months))st.months=j.months;
+  if(!$('#o-name').value)$('#o-name').value=clean(offer.name||'');if(!$('#o-email').value)$('#o-email').value=offer.email||'';if(!$('#o-acct').value)$('#o-acct').value=offer.account||'';
+  drawPicker();update();
+ }catch{offer=null;offerGone=true;renewToken='';update()}
+}
 
 /* Confirmation. "saved" is true only after the backend confirmed it stored the request. */
 function message(v,o){const L=[tx((o.saved?'mSaved_':'mNew_')+v.type),''];if(o.ref)L.push(tx('ref')+': '+o.ref);
@@ -195,7 +229,9 @@ function renderDone(){const {v,o}=lastDone,box=$('#o-done'),msg=message(v,o);
  const parts=[head,el('p','done-lead',tx(o.saved?(o.duplicate?'dupP':'doneP'):'offP'))];
  if(o.ref){const r=el('p','ref');r.append(el('span',0,tx('ref')),el('b',0,o.ref));parts.push(r)}
  const dl=el('dl','sum'),row=(k,val)=>{const d=el('div');d.append(el('dt',0,tx(k)),el('dd',0,val));dl.append(d)};
- row('type',tx(v.type));row('plan',planText(v.devices,v.months));row('total',money(o.price??v.price)+' USD');if(v.account)row('acct',v.account);
+ row('type',tx(v.type));row('plan',planText(v.devices,v.months));
+ if(o.disc){row('offOrig',money(o.disc.orig)+' USD');const dd=el('div');dd.append(el('dt',0,tx('offDisc').replace('{pct}',o.disc.pct)),el('dd',0,'−'+money(o.disc.amt)+' USD'));dl.append(dd)}
+ row('total',money(o.price??v.price)+' USD');if(v.account)row('acct',v.account);
  parts.push(dl,el('h3','step-h',tx('stepH')),el('p','step-p',tx('stepP')));
  const lab=el('p','msg-l',tx('msgL'));lab.id='o-msg-l';const pre=el('pre','msgbox',msg);pre.id='o-message';pre.tabIndex=0;pre.setAttribute('aria-labelledby','o-msg-l');
  const status=el('p','status');status.setAttribute('role','status');
@@ -224,6 +260,6 @@ if(!ready())$('.next li').dataset.t='next1off';
 let first=qs.get('lang');if(!LANGS.includes(first)){try{first=localStorage.getItem('tellyro-lang')||(navigator.language||'').slice(0,2).toLowerCase()}catch{}}
 sel.value=LANGS.includes(first)?first:'en';
 sel.addEventListener('change',()=>{render();const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u)});
-render();startVerification();
+render();startVerification();loadOffer();
 })();
 

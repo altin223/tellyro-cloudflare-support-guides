@@ -1,4 +1,4 @@
-﻿:root{color-scheme:dark;--bg:#06112a;--navy:#0f2a5b;--acc:#3ea6ff;--text:#f5f9ff;--mut:#a2b4d0;--line:rgba(155,190,244,.18);--field:rgba(5,13,31,.6);--glass:rgba(255,255,255,.045)}
+:root{color-scheme:dark;--bg:#06112a;--navy:#0f2a5b;--acc:#3ea6ff;--text:#f5f9ff;--mut:#a2b4d0;--line:rgba(155,190,244,.18);--field:rgba(5,13,31,.6);--glass:rgba(255,255,255,.045)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;min-height:100vh;background:radial-gradient(ellipse 70% 36% at 100% 0,rgba(36,108,192,.28),transparent 78%),radial-gradient(ellipse 70% 55% at 0 70%,rgba(23,56,122,.27),transparent 80%),var(--bg);color:var(--text);font:15px/1.6 'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;overflow-x:hidden}
 a{color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
@@ -126,3 +126,7 @@ footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-betw
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.btn:hover{transform:none}}
 
+/* renewal discount from an email link */
+.o-banner{margin:0 0 16px;padding:13px 16px;border-radius:14px;background:rgba(62,166,255,.12);border:1px solid rgba(62,166,255,.5);color:#d8ecff;font-size:14px;line-height:1.55}
+.o-banner.warn{background:rgba(255,196,87,.1);border-color:rgba(255,196,87,.5);color:#ffe7b3}
+.offer-sum{margin:12px 0 0}.offer-sum .disc dd{color:#7be0b0}
