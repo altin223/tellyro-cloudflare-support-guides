@@ -10,7 +10,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,.opt:has(input:focus-v
 .sitehead{position:sticky;top:0;z-index:80;border-bottom:1px solid var(--line);background:rgba(5,15,36,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .headwrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
 .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:25px;letter-spacing:-.04em;text-decoration:none}.logo i{width:8px;height:8px;border-radius:50%;background:var(--acc);margin:12px 0 0 -4px}
-.headend{display:flex;align-items:center;gap:18px}.headlink{color:#c2d1e8;font-size:13px;font-weight:650;text-decoration:none}.headlink:hover{color:#fff}
+.headend{display:flex;align-items:center;gap:18px}.headlink{color:#c2d1e8;font-size:13px;font-weight:650;text-decoration:none;display:inline-block;padding:8px 0}.headlink:hover{color:#fff}
 .sel{min-height:40px;background:#112346;border:1px solid #324b72;border-radius:11px;padding:6px 10px;color:#fff;font-size:12px;font-weight:600;max-width:136px;cursor:pointer}
 /* Back + hero */
 .back{display:inline-flex;align-items:center;gap:8px;margin:28px 0 0;min-height:44px;padding:0 18px 0 14px;border-radius:999px;border:1px solid rgba(62,166,255,.45);background:var(--navy);color:#fff;font-size:14px;font-weight:700;text-decoration:none;transition:background .2s,border-color .2s}
@@ -108,7 +108,7 @@ fieldset.o-sec>legend{float:left;width:100%}fieldset.o-sec>legend+*{clear:both} 
 .done-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .nojs{padding:22px;margin:0 0 60px}.nojs a{color:#a8d8ff}
 footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#93a6c5;font-size:12px}
-footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}footer a{color:#a3cfff;text-decoration:none}footer nav{display:flex;gap:16px;flex-wrap:wrap}
+footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}footer a{color:#a3cfff;text-decoration:none;display:inline-block;padding:5px 0}footer nav{display:flex;gap:2px 18px;flex-wrap:wrap}
 @media(max-width:960px){
  .o-layout{grid-template-columns:1fr}.o-side{position:static}
  .durs{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:14px}
