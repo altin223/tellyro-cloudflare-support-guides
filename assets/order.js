@@ -88,6 +88,11 @@ const S={
  offOnly:T('The renewal discount only applies to renewals. Choose “Renewal” above to use it.','Der Verlängerungsrabatt gilt nur für Verlängerungen. Wählen Sie oben „Verlängerung“, um ihn zu nutzen.','Yenileme indirimi yalnızca yenilemeler için geçerlidir. Kullanmak için yukarıdan “Yenileme”yi seçin.','La remise ne s’applique qu’aux renouvellements. Choisissez « Renouvellement » ci-dessus pour en profiter.','El descuento solo se aplica a renovaciones. Elige «Renovación» arriba para usarlo.','Lo sconto vale solo per i rinnovi. Scegli «Rinnovo» qui sopra per usarlo.'),
  offGone:T('This renewal link is no longer available. It may have been used already, or the account was renewed. You can still send a renewal request at the regular price.','Dieser Verlängerungslink ist nicht mehr verfügbar. Er wurde vielleicht schon verwendet, oder das Konto wurde verlängert. Sie können die Verlängerung weiterhin zum regulären Preis anfragen.','Bu yenileme bağlantısı artık geçerli değil. Daha önce kullanılmış olabilir veya hesap yenilenmiş olabilir. Yenileme talebini normal fiyattan yine de gönderebilirsiniz.','Ce lien de renouvellement n’est plus disponible. Il a peut-être déjà été utilisé, ou le compte a été renouvelé. Vous pouvez toujours envoyer une demande au tarif normal.','Este enlace de renovación ya no está disponible. Puede que ya se haya usado o que la cuenta ya esté renovada. Aun así puedes enviar la solicitud al precio normal.','Questo link di rinnovo non è più disponibile. Potrebbe essere già stato usato oppure l’account è stato rinnovato. Puoi comunque inviare la richiesta al prezzo normale.'),
  eOffer:T('This renewal offer can’t be applied. It may have been used already, or the account was renewed. The discount was removed: press Submit Request again to send your renewal at the regular price.','Dieses Angebot kann nicht angewendet werden. Es wurde vielleicht schon verwendet, oder das Konto wurde verlängert. Der Rabatt wurde entfernt: Tippen Sie erneut auf „Anfrage senden“, um die Verlängerung zum regulären Preis anzufragen.','Bu yenileme teklifi uygulanamıyor. Daha önce kullanılmış olabilir veya hesap yenilenmiş olabilir. İndirim kaldırıldı: yenilemeyi normal fiyattan göndermek için yeniden “Talebi gönder”e basın.','Cette offre de renouvellement ne peut pas être appliquée. Elle a peut-être déjà été utilisée, ou le compte a été renouvelé. La remise a été retirée : appuyez à nouveau sur « Envoyer la demande » pour envoyer le renouvellement au tarif normal.','No se puede aplicar esta oferta de renovación. Puede que ya se haya usado o que la cuenta ya esté renovada. Se ha quitado el descuento: pulsa de nuevo «Enviar solicitud» para enviar la renovación al precio normal.','Impossibile applicare questa offerta di rinnovo. Potrebbe essere già stata usata oppure l’account è stato rinnovato. Lo sconto è stato rimosso: premi di nuovo «Invia richiesta» per inviare il rinnovo al prezzo normale.'),
+ welBanner:T('{pct}% welcome offer on your first Premium plan applied. The price on the right already includes it.','{pct} % Willkommensrabatt auf Ihren ersten Premium-Tarif angewendet. Der Preis rechts enthält ihn bereits.','İlk Premium paketinize %{pct} hoş geldin indirimi uygulandı. Sağdaki fiyata dahildir.','Offre de bienvenue de {pct} % sur votre première offre Premium appliquée. Le prix à droite l’inclut déjà.','Oferta de bienvenida del {pct} % en tu primer plan Premium aplicada. El precio de la derecha ya la incluye.','Offerta di benvenuto del {pct}% sul tuo primo piano Premium applicata. Il prezzo a destra la include già.'),
+ welOnly:T('The welcome offer applies to a new purchase. Choose “New purchase” above to use it.','Das Willkommensangebot gilt für einen Neukauf. Wählen Sie oben „Neukauf“, um es zu nutzen.','Hoş geldin teklifi yeni satın alma için geçerlidir. Kullanmak için yukarıdan “Yeni satın alma”yı seçin.','L’offre de bienvenue s’applique à un nouvel achat. Choisissez « Nouvel achat » ci-dessus pour en profiter.','La oferta de bienvenida es para una compra nueva. Elige «Compra nueva» arriba para usarla.','L’offerta di benvenuto vale per un nuovo acquisto. Scegli «Nuovo acquisto» qui sopra per usarla.'),
+ welGone:T('This welcome offer is no longer available. It is for your first Premium plan only and may have been used already. You can still send a request at the regular price.','Dieses Willkommensangebot ist nicht mehr verfügbar. Es gilt nur für Ihren ersten Premium-Tarif und wurde vielleicht schon verwendet. Sie können weiterhin zum regulären Preis anfragen.','Bu hoş geldin teklifi artık geçerli değil. Yalnızca ilk Premium paketiniz içindir ve daha önce kullanılmış olabilir. Talebinizi normal fiyattan yine de gönderebilirsiniz.','Cette offre de bienvenue n’est plus disponible. Elle ne vaut que pour votre première offre Premium et a peut-être déjà été utilisée. Vous pouvez toujours envoyer une demande au tarif normal.','Esta oferta de bienvenida ya no está disponible. Es solo para tu primer plan Premium y puede que ya se haya usado. Aun así puedes enviar la solicitud al precio normal.','Questa offerta di benvenuto non è più disponibile. Vale solo per il tuo primo piano Premium e potrebbe essere già stata usata. Puoi comunque inviare la richiesta al prezzo normale.'),
+ eWelcome:T('The welcome offer can’t be applied to this request. It is for your first Premium plan only, with the email address you used for your trial. The discount was removed: press Submit Request again to send it at the regular price.','Das Willkommensangebot kann auf diese Anfrage nicht angewendet werden. Es gilt nur für Ihren ersten Premium-Tarif und mit der E-Mail-Adresse Ihres Tests. Der Rabatt wurde entfernt: Tippen Sie erneut auf „Anfrage senden“, um zum regulären Preis anzufragen.','Hoş geldin teklifi bu talebe uygulanamıyor. Yalnızca ilk Premium paketiniz için ve deneme için kullandığınız e-posta adresiyle geçerlidir. İndirim kaldırıldı: normal fiyattan göndermek için yeniden “Talebi gönder”e basın.','L’offre de bienvenue ne peut pas être appliquée à cette demande. Elle ne vaut que pour votre première offre Premium, avec l’adresse e-mail de votre essai. La remise a été retirée : appuyez à nouveau sur « Envoyer la demande » pour l’envoyer au tarif normal.','No se puede aplicar la oferta de bienvenida a esta solicitud. Es solo para tu primer plan Premium y con el correo que usaste en tu prueba. Se ha quitado el descuento: pulsa de nuevo «Enviar solicitud» para enviarla al precio normal.','Impossibile applicare l’offerta di benvenuto a questa richiesta. Vale solo per il tuo primo piano Premium e con l’indirizzo e-mail usato per la prova. Lo sconto è stato rimosso: premi di nuovo «Invia richiesta» per inviarla al prezzo normale.'),
+ eOfferUse:T('Your welcome offer is already on another open request. Message us on WhatsApp or Telegram and we will help you change the plan.','Ihr Willkommensangebot ist bereits in einer anderen offenen Anfrage. Schreiben Sie uns über WhatsApp oder Telegram, dann helfen wir Ihnen, den Tarif zu ändern.','Hoş geldin teklifiniz zaten açık başka bir talepte. Paketi değiştirmenize yardımcı olmamız için bize WhatsApp veya Telegram’dan yazın.','Votre offre de bienvenue figure déjà sur une autre demande en cours. Écrivez-nous sur WhatsApp ou Telegram et nous vous aiderons à changer d’offre.','Tu oferta de bienvenida ya está en otra solicitud abierta. Escríbenos por WhatsApp o Telegram y te ayudamos a cambiar el plan.','La tua offerta di benvenuto è già su un’altra richiesta aperta. Scrivici su WhatsApp o Telegram e ti aiuteremo a cambiare piano.'),
  offOrig:T('Original price','Originalpreis','Orijinal fiyat','Prix d’origine','Precio original','Prezzo originale'),
  offDisc:T('Discount ({pct}%)','Rabatt ({pct} %)','İndirim (%{pct})','Remise ({pct} %)','Descuento ({pct} %)','Sconto ({pct}%)')};
 const UNITS={en:[['device','devices'],['month','months']],de:[['Gerät','Geräte'],['Monat','Monate']],tr:[['cihaz','cihaz'],['ay','ay']],fr:[['appareil','appareils'],['mois','mois']],es:[['dispositivo','dispositivos'],['mes','meses']],it:[['dispositivo','dispositivi'],['mese','mesi']]};
@@ -122,10 +127,15 @@ const qs=new URLSearchParams(location.search),num=(v,list,def)=>list.includes(Nu
 const st={type:qs.get('type')==='renewal'?'renewal':'purchase',devices:num(qs.get('devices'),P.devices,1),months:num(qs.get('months'),P.months,12)};
 /* A renewal link from a reminder email can carry a discount. The page only SHOWS it (same rounding as the server);
    the server decides the real price from the secret link, never from anything this page sends. */
-const RENEW_RE=/^[A-Za-z0-9_-]{43}$/;let renewToken=qs.get('renew')||'';if(!RENEW_RE.test(renewToken))renewToken='';
+const RENEW_RE=/^[A-Za-z0-9_-]{43}$/;
+/* ?renew= (renewal discount from a reminder email) or ?welcome= (10% welcome offer on the first Premium plan, from the trial-ended email) */
+const isWelcome=!qs.get('renew')&&!!qs.get('welcome');
+let renewToken=qs.get('renew')||qs.get('welcome')||'';if(!RENEW_RE.test(renewToken))renewToken='';
 let offer=null,offerGone=false;
 const base=()=>P.prices[st.devices][st.months];
-const disc=()=>offer&&offer.percent>0&&st.type==='renewal'?Math.round(base()*100*offer.percent/100)/100:0;
+// a renewal discount applies to renewals, the welcome offer to a new purchase
+const offerFits=()=>!!offer&&offer.percent>0&&(offer.kind==='welcome'?st.type==='purchase':st.type==='renewal');
+const disc=()=>offerFits()?Math.round(base()*100*offer.percent/100)/100:0;
 const price=()=>Math.round((base()-disc())*100)/100;
 let busy=false,errKey='',errDetail='',lastDone=null;
 
@@ -181,7 +191,7 @@ form.addEventListener('submit',async e=>{
  setBusy(true);
  try{
   const r=await fetch(C.supabaseUrl.replace(/\/$/,'')+'/functions/v1/purchase-request',{method:'POST',headers:{'content-type':'application/json','apikey':C.supabaseAnonKey},
-   body:JSON.stringify({request_type:v.type,name:v.name,email:v.email,devices:v.devices,months:v.months,account_reference:v.account,message:v.message,turnstile:tk,offer:offer&&st.type==='renewal'?renewToken:undefined})});
+   body:JSON.stringify({request_type:v.type,name:v.name,email:v.email,devices:v.devices,months:v.months,account_reference:v.account,message:v.message,turnstile:tk,offer:offerFits()?renewToken:undefined})});
   let j={};try{j=await r.json()}catch{}
   if(r.status===503){showDone(v,{saved:false});return} // requests paused in the dashboard: nothing was saved
   if(!r.ok||!j.ok){const x=Error(j.error||'HTTP '+r.status);x.code=j.code;throw x}
@@ -191,8 +201,9 @@ form.addEventListener('submit',async e=>{
   // everything the customer entered stays in the form; the token is single-use, so it is reset for the retry
   resetTs();const f=FIELD[x.code];
   if(f){setFieldErr(f[0],f[1]);$('#o-'+f[0]).focus();return}
+  const wasWelcome=offer&&offer.kind==='welcome'||isWelcome;
   if(x.code==='offer_invalid'||x.code==='offer_used'){offer=null;offerGone=true;renewToken='';update()} // the discount is removed so the customer can resubmit at the regular price
-  const k={invalid_plan:'ePlan',captcha_failed:'eCaptchaBad',rate_limited:'eRate',offer_invalid:'eOffer',offer_used:'eOffer'}[x.code]||'eSave';
+  const k={invalid_plan:'ePlan',captcha_failed:'eCaptchaBad',rate_limited:'eRate',offer_invalid:wasWelcome?'eWelcome':'eOffer',offer_used:wasWelcome?'eWelcome':'eOffer',offer_in_use:'eOfferUse'}[x.code]||'eSave';
   showErr(k,k==='eSave'?x.message:'');$('#o-err').scrollIntoView({block:'center',behavior:'smooth'});
  }finally{setBusy(false)}
 });
@@ -200,8 +211,9 @@ form.addEventListener('submit',async e=>{
 /* Renewal link from an email: ask the server what it contains (it answers only for a valid secret link), then pre-fill. */
 function drawOffer(){const d=disc(),box=$('#s-offer'),ban=$('#o-banner');
  box.hidden=!d;if(d){$('#s-orig').textContent=money(base());$('#s-disc-l').textContent=tx('offDisc').replace('{pct}',offer.percent);$('#s-disc').textContent='−'+money(d)}
- let t='',warn=false;
- if(offerGone){t=tx('offGone');warn=true}else if(offer&&offer.percent>0)t=st.type==='renewal'?tx('offBanner').replace('{pct}',offer.percent):tx('offOnly');
+ let t='',warn=false;const w=offer?offer.kind==='welcome':isWelcome;
+ if(offerGone){t=tx(w?'welGone':'offGone');warn=true}
+ else if(offer&&offer.percent>0)t=offerFits()?tx(w?'welBanner':'offBanner').replace('{pct}',offer.percent):tx(w?'welOnly':'offOnly');
  ban.hidden=!t;ban.textContent=t;ban.className='o-banner'+(warn?' warn':'')}
 async function loadOffer(){
  if(!renewToken)return;
@@ -210,8 +222,9 @@ async function loadOffer(){
   const r=await fetch(C.supabaseUrl.replace(/\/$/,'')+'/functions/v1/purchase-request',{method:'POST',headers:{'content-type':'application/json','apikey':C.supabaseAnonKey},body:JSON.stringify({action:'offer',token:renewToken})});
   const j=await r.json().catch(()=>({}));
   if(!r.ok||!j.ok)throw Error('gone');
-  offer={percent:Number(j.percent)||0,name:j.name,email:j.email,account:j.account};
-  st.type='renewal';if(P.devices.includes(j.devices))st.devices=j.devices;if(P.months.includes(j.months))st.months=j.months;
+  offer={percent:Number(j.percent)||0,kind:j.kind==='welcome'?'welcome':'renewal',name:j.name,email:j.email,account:j.account};
+  // a renewal link opens the renewal of that account; the welcome offer opens a new purchase (the plan stays the visitor's choice)
+  if(offer.kind==='welcome')st.type='purchase';else{st.type='renewal';if(P.devices.includes(j.devices))st.devices=j.devices;if(P.months.includes(j.months))st.months=j.months}
   if(!$('#o-name').value)$('#o-name').value=clean(offer.name||'');if(!$('#o-email').value)$('#o-email').value=offer.email||'';if(!$('#o-acct').value)$('#o-acct').value=offer.account||'';
   drawPicker();update();
  }catch{offer=null;offerGone=true;renewToken='';update()}

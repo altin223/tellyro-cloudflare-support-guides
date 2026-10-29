@@ -14,3 +14,14 @@
 /admin.html
   Cache-Control: no-store
   Referrer-Policy: no-referrer
+/account.html
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex
+/account
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex
+/assets/email/*
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
