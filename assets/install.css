@@ -98,3 +98,4 @@ footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-betw
  .support{padding:18px 16px}.sup-acts{grid-template-columns:1fr}.btn{min-height:52px}.btn.copy{width:100%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile,.btn{transition:none}.tile:hover,.btn:hover{transform:none}}
+.logo img,.brand img{display:block;width:auto;height:34px}.logo picture,.brand picture{display:block}@media(max-width:530px){.logo img,.brand img{height:30px}}

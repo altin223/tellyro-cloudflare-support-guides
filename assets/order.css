@@ -130,3 +130,4 @@ footer .wrap{display:flex;gap:20px;align-items:center;justify-content:space-betw
 .o-banner{margin:0 0 16px;padding:13px 16px;border-radius:14px;background:rgba(62,166,255,.12);border:1px solid rgba(62,166,255,.5);color:#d8ecff;font-size:14px;line-height:1.55}
 .o-banner.warn{background:rgba(255,196,87,.1);border-color:rgba(255,196,87,.5);color:#ffe7b3}
 .offer-sum{margin:12px 0 0}.offer-sum .disc dd{color:#7be0b0}
+.logo img,.brand img{display:block;width:auto;height:34px}.logo picture,.brand picture{display:block}@media(max-width:530px){.logo img,.brand img{height:30px}}
