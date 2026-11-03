@@ -22,6 +22,8 @@ try {
     $path = [Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath).TrimStart('/')
     if ($path -eq '' -or $path.EndsWith('/')) { $path += 'index.html' }
     $file = [System.IO.Path]::GetFullPath((Join-Path $root $path))
+    # Cloudflare serves /installation for installation.html: do the same here
+    if (-not (Test-Path $file -PathType Leaf) -and -not [System.IO.Path]::GetExtension($file) -and (Test-Path "$file.html" -PathType Leaf)) { $file = "$file.html" }
 
     if ($file.StartsWith($root) -and (Test-Path $file -PathType Leaf)) {
       $bytes = [System.IO.File]::ReadAllBytes($file)

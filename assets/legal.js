@@ -152,7 +152,7 @@ if(copy){
  setText('.toc-title',copy.on);setText('.mobile-toc summary',copy.jump);setText('.back span',copy.back);
  setText('.next strong',copy.question);setText('.next p',copy.questionDesc);setText('.next:nth-of-type(2) strong',copy.help);setText('.next:nth-of-type(2) p',copy.helpDesc);
  const n=document.querySelector('.next-link');n.textContent=copy.read+' '+copy[other]+' →';
- document.querySelectorAll('.footlinks a').forEach(a=>{let path=a.getAttribute('href');if(path==='index.html')a.textContent=copy.home;else if(path==='privacy.html')a.textContent=copy.privacy;else if(path==='terms.html')a.textContent=copy.terms;else if(path==='client.html')a.textContent=copy.area;});
+ document.querySelectorAll('.footlinks a').forEach(a=>{let path=(a.getAttribute('href')||'').replace(/^\//,'').replace(/\.html$/,'');if(path===''||path==='index')a.textContent=copy.home;else if(path==='privacy')a.textContent=copy.privacy;else if(path==='terms')a.textContent=copy.terms;else if(path==='client')a.textContent=copy.area;});
  const trs=translations[lang][docType];
  sections.forEach((section,i)=>{section.querySelector('.section-name').textContent=trs[i][0];section.querySelectorAll('p').forEach(p=>p.remove());const p=document.createElement('p');p.textContent=trs[i][1];section.append(p)});
  document.querySelectorAll('.toc-links').forEach(nav=>nav.querySelectorAll('a').forEach((a,i)=>{a.textContent=trs[i][0]}));
@@ -164,7 +164,7 @@ if(copy){
  setText('.hero .lead',docType==='privacy'?'What we collect, why we use it, and the choices you have when you visit Tellyro, request a trial or contact support.':'Your subscription, device limits, refunds and consumer rights — explained in straightforward language.');
  setText('.tag','● Last updated: 23 October 2026');setText('.toc-title','On this page');setText('.mobile-toc summary','Jump to a section');setText('.back span','Back to website');setText('.breadcrumbs > a','Home');setText('.next strong','Questions about this policy?');setText('.next p','Our support team can help you understand these details.');setText('.next:nth-of-type(2) strong','Need assistance?');setText('.next:nth-of-type(2) p','Contact the official Tellyro team directly.');
  setText('.next-link', 'Read '+(docType==='privacy'?'Terms of Service':'Privacy Policy')+' →');
- document.querySelectorAll('.footlinks a').forEach(a=>{let path=a.getAttribute('href');if(path==='index.html')a.textContent='Home';else if(path==='privacy.html')a.textContent='Privacy Policy';else if(path==='terms.html')a.textContent='Terms of Service';else if(path==='client.html')a.textContent='Client Area';});
+ document.querySelectorAll('.footlinks a').forEach(a=>{let path=(a.getAttribute('href')||'').replace(/^\//,'').replace(/\.html$/,'');if(path===''||path==='index')a.textContent='Home';else if(path==='privacy')a.textContent='Privacy Policy';else if(path==='terms')a.textContent='Terms of Service';else if(path==='client')a.textContent='Client Area';});
  sections.forEach((section,i)=>{section.querySelector('.section-name').textContent=english[i].title;section.querySelectorAll('p').forEach(p=>p.remove());english[i].paragraphs.forEach(t=>{const p=document.createElement('p');p.textContent=t;section.append(p)})});
  document.querySelectorAll('.toc-links').forEach(nav=>nav.querySelectorAll('a').forEach((a,i)=>a.textContent=english[i].title));
  document.title=(docType==='privacy'?'Privacy Policy':'Terms of Service')+' | Tellyro';

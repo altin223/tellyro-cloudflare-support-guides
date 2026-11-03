@@ -11,6 +11,10 @@
 /client.html
   Cache-Control: no-store
   Referrer-Policy: no-referrer
+/client
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex
 /admin.html
   Cache-Control: no-store
   Referrer-Policy: no-referrer
