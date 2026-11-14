@@ -90,8 +90,8 @@ t('stands out','besonders ist','öne çıkıyor','se démarque','destaca','si di
 t('See how Tellyro compares with other streaming providers.','Vergleichen Sie Tellyro mit anderen Streaming-Anbietern.','Tellyro’nun diğer sağlayıcılarla farkını görün.','Comparez Tellyro à d’autres fournisseurs de streaming.','Compara Tellyro con otros proveedores de streaming.','Confronta Tellyro con altri servizi streaming.');
 t('Feature','Merkmal','Özellik','Fonctionnalité','Función','Caratteristica');
 t('Other providers','Andere Anbieter','Diğer sağlayıcılar','Autres fournisseurs','Otros proveedores','Altri fornitori');
-t('What customers','Was Kunden','Müşteriler','Ce que disent','Lo que dicen','Cosa dicono');
-t('are saying','berichten','ne diyor','nos clients','nuestros clientes','i nostri clienti');
+t('Reliability first','Zuverlässigkeit zuerst','Önce güvenilirlik','La fiabilité avant tout','La fiabilidad primero','Prima di tutto l’affidabilità');
+t('Channel and library numbers come from our service providers, are a guide, and can change over time.','Die Zahlen für Sender und Mediathek stammen von unseren Dienstanbietern, sind Richtwerte und können sich im Lauf der Zeit ändern.','Kanal ve kütüphane sayıları hizmet sağlayıcılarımızdan gelir, yaklaşık değerlerdir ve zamanla değişebilir.','Les nombres de chaînes et de contenus proviennent de nos prestataires de services, sont indicatifs et peuvent évoluer avec le temps.','Las cifras de canales y de catálogo proceden de nuestros proveedores del servicio, son orientativas y pueden cambiar con el tiempo.','I numeri di canali e catalogo provengono dai nostri fornitori del servizio, sono indicativi e possono cambiare nel tempo.');
 t('Frequently asked','Häufig gestellte','Sık sorulan','Questions','Preguntas','Domande');
 t('questions','Fragen','sorular','fréquentes','frecuentes','frequenti');
 t('Help Center','Hilfe-Center','Yardım merkezi','Centre d’aide','Centro de ayuda','Centro assistenza');

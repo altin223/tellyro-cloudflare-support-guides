@@ -256,11 +256,10 @@ const CFG={
  promo:{on:true,pct:10,delay:6000}, // new-customer welcome popup
  /* Comparison table — competitor column is deliberately neutral. Only add specific competitor claims you can prove. */
  compare:[["Real human support","Real people ready to help","Varies by provider"],["Setup assistance","Guided setup help from our team","Varies by provider"],["Free trial","Request a trial through our team","Varies by provider"],["Clear pricing","Total prices per duration, in USD","Varies by provider"],["Device plans","1, 2 or 3 simultaneous devices","Varies by provider"],["Live TV, movies & series","20.000+ live channels and 120.000+ movies & series","Varies by provider"]],
- /* SAMPLE TEXT — replace with genuine customer reviews (with permission) before launch */
- reviews:[["Daniel","UK · Fire TV Stick","Setup took me about ten minutes, and when I got stuck on one step someone actually walked me through it. Refreshing."],["Sarah","USA · Android TV","My dad isn’t great with technology and even he can find his channels now. The team was really patient with all our questions."],["Marco","Germany · Samsung Smart TV","Switched over a few weeks ago. The menus are easy to get around and it’s been smooth on the living room TV."],["Emma","Ireland · iPhone","I liked that I was chatting with an actual person instead of a bot. Made the whole thing feel less stressful."],["James","USA · Apple TV","Went with the 12 month plan for two devices. The price I saw was the price I was quoted, no surprises."],["Ana","Spain · Android Phone","Nice to have everything on my phone when I’m travelling and on the big screen when I’m home."]],
+ /* Customer reviews: the earlier sample reviews were removed on 2026-11-09 because they were placeholder text. Only add genuine reviews, with the customer's permission. */
  email:"",               // official support email
- claims:{channels:"20.000+",library:"120.000+",uptime:"99%"}, // owner-supplied: VERIFY before publishing
- devices:[["Smart TVs","Samsung, LG and other smart TVs.","t"],["Fire TV","Fire TV Stick and Fire TV devices.","s"],["Android TV / Google TV","Built-in Android and Google TV.","t"],["Android Boxes","Streaming boxes running Android.","b"],["Smartphones","iPhone and Android phones.","p"],["Tablets","iPad and Android tablets.","a"],["Windows & Mac","Laptops and desktop computers.","l"],["Apple TV","Apple TV set-top boxes.","m"]], // [name, description, icon] — confirm real app support
+ claims:{channels:"20.000+",library:"120.000+"}, // figures come from the service providers/resellers (owner, 2026-11-09), not measured by Tellyro: shown with a "come from our service providers, are a guide" note under the prices. The earlier "99% uptime" claim was removed (no measurement behind it).
+ devices:[["Smart TVs","Samsung, LG and other smart TVs.","t"],["Fire TV","Fire TV Stick and Fire TV devices.","s"],["Android TV / Google TV","Built-in Android and Google TV.","t"],["Android Boxes","Streaming boxes running Android.","b"],["Smartphones","iPhone and Android phones.","p"],["Tablets","iPad and Android tablets.","a"],["Windows & Mac","Windows PCs and Macs with an Apple M1 chip or later.","l"],["Apple TV","Apple TV with tvOS 12 or later.","m"]], // [name, description, icon] — Apple TV and Mac use Smarters Player Lite (confirmed by the owner 2026-11-09; App Store listing: tvOS 12.0+, Mac needs Apple M1 or later), Windows uses MyIPTV Player
  prices:window.TELLYRO_PLANS.prices // edit in assets/plans.js (shared with order.html)
 };
 </script>
@@ -299,7 +298,8 @@ const CFG={
 <div class="seg glass" role="group" aria-label="Number of devices" id="seg"></div>
 <div id="plans" aria-live="polite"></div>
 <div class="renew-row"><span>Already a customer?</span><a class="btn renew" id="renew-link" href="order.html?type=renewal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg>Renew your plan</a></div>
-<p class="note">All prices in USD. Totals for the full duration, not monthly charges. <span id="dnote"></span> Payments are arranged only through our WhatsApp or Telegram support chat; there is no online checkout on this website.</p></div></section>
+<p class="note">All prices in USD. Totals for the full duration, not monthly charges. <span id="dnote"></span> Payments are arranged only through our WhatsApp or Telegram support chat; there is no online checkout on this website.</p>
+<p class="note" id="claimnote">Channel and library numbers come from our service providers, are a guide, and can change over time.</p></div></section>
 
 <section id="trial"><div class="wrap"><div class="c rv"><span class="eyebrow">Free trial</span><h2>Try Tellyro <em>for yourself.</em></h2><p class="sub">Tell us a little about your setup and our team will help you get started.</p></div>
 <form class="glass" id="tf" novalidate><div class="tglow"></div><div id="fields" class="fgrid"><div class="full thead"><b>Free trial</b> Takes about a minute · no payment details needed</div>
@@ -334,7 +334,6 @@ const CFG={
 
 <section id="compare"><div class="wrap"><div class="c rv"><h2>Why Tellyro <em>stands out</em></h2><p class="sub">See how Tellyro compares with other streaming providers.</p></div><div class="cmp glass rv"><table id="ct"><thead><tr><th>Feature</th><th class="us">Tellyro</th><th>Other providers</th></tr></thead><tbody></tbody></table></div></div></section>
 
-<section id="reviews"><div class="wrap"><div class="c rv"><h2>What customers <em>are saying</em></h2></div><div class="grid" id="rvg"></div></div></section>
 
 <section id="faq"><div class="wrap" style="max-width:800px"><div class="c rv"><span class="eyebrow">Help Center</span><h2>Frequently asked <em>questions</em></h2></div><div style="margin-top:36px" id="fq"></div></div></section>
 
@@ -346,7 +345,7 @@ const CFG={
 <footer><div class="wrap"><div class="fg"><div><a class="logo" href="#home" style="padding:0"><picture><source type="image/webp" srcset="/assets/img/tellyro-logo-300.webp 300w, /assets/img/tellyro-logo-420.webp 420w" sizes="127px"><img class="logo-img" src="/assets/img/tellyro-logo-300.png" width="127" height="34" alt="Tellyro"></picture></a><p>Entertainment made simple, backed by real people.</p></div>
 <div><h4>Explore</h4><a href="#home">Home</a><a href="#pricing">Pricing</a><a href="#why">Features</a><a href="#devices">Devices</a></div>
 <div><h4>Support</h4><a href="/installation">Installation Guides</a><a href="https://tellyro.blog/" lang="en">Troubleshooting Blog</a><a href="#faq">Help Center</a><a href="#trial">Free Trial</a><a href="#support" data-ct="wa">WhatsApp</a><a href="#support" data-ct="tg">Telegram</a></div>
-<div><h4>Company</h4><a href="#home">About</a><a href="#support">Contact</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
+<div><h4>Company</h4><a href="/about">About</a><a href="#support">Contact</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
 <div class="bot">© 2026 Tellyro. All rights reserved. Refund requests can be made within the first 3 days; applicable statutory consumer rights are not affected. <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>.</div></div></footer>
 
 <div id="mod" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box"><h3 id="mt"></h3><div id="mb"></div></div></div>
@@ -360,7 +359,7 @@ document.querySelectorAll("[data-c]").forEach(e=>{const v=CFG.claims[e.dataset.c
 const cu=e=>{const[n,suf]=e._a,t0=performance.now(),f=x=>Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g,"."),st=t=>{const p=Math.min((t-t0)/1800,1);e.textContent=f(n*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)};
 /* features */
 const C=CFG.claims;
-[["a",C.uptime+" Uptime","Built for reliable entertainment with service availability as a priority."],["h","Real Human Support","Need help? Our support team is made up of real people ready to assist you. Personal, friendly assistance is at the heart of Tellyro.",1],["t",C.channels+" Live Channels","Explore a wide selection of live television channels from around the world."],["f",C.library+" Movies & Series","Discover an extensive entertainment library with movies and series for every mood."],["z","Simple Setup","Start enjoying entertainment with straightforward setup instructions and assistance."],["m","Multiple Devices","Choose the plan that matches your household and the number of simultaneous devices you need."]].forEach(([i,t,p,h])=>{const c=el("div","card glass rv"+(h?" hl":""));c.innerHTML=svg(i);c.append(el("h3",0,t),el("p",0,p));$("#feat").append(c)});
+[["a","Reliability first","Built for reliable entertainment with service availability as a priority."],["h","Real Human Support","Need help? Our support team is made up of real people ready to assist you. Personal, friendly assistance is at the heart of Tellyro.",1],["t",C.channels+" Live Channels","Explore a wide selection of live television channels from around the world."],["f",C.library+" Movies & Series","Discover an extensive entertainment library with movies and series for every mood."],["z","Simple Setup","Start enjoying entertainment with straightforward setup instructions and assistance."],["m","Multiple Devices","Choose the plan that matches your household and the number of simultaneous devices you need."]].forEach(([i,t,p,h])=>{const c=el("div","card glass rv"+(h?" hl":""));c.innerHTML=svg(i);c.append(el("h3",0,t),el("p",0,p));$("#feat").append(c)});
 /* pricing */
 const DUR=[1,3,6,12,24],money=n=>"$"+n.toFixed(2);let dc=1;
 function drawPlans(){const box=$("#plans");box.innerHTML="";DUR.forEach(m=>{const price=CFG.prices[dc][m],c=el("div","plan glass"+(m==24?" hl":""));
@@ -416,6 +415,10 @@ countries.forEach(c=>{const o=el("option");o.value=c;$("#cl").append(o)});
 const grp=(id,type,name,vals,def)=>vals.forEach(v=>{const l=el("label"),i=el("input");i.type=type;i.name=name;i.value=v;if(v==def)i.checked=true;l.append(i,document.createTextNode(v));$(id).append(l)});
 grp("#ch","checkbox","ch",["USA","UK","Europe","Other"]);grp("#ip","radio","ip",["Yes","No"],"No");
 const clean=s=>s.replace(/[\r\n]+/g," ").trim();
+// Which blog guide sent this visitor: a link like https://tellyro.com/?guide=tivimate-playlist#trial. The tag is read from the address on
+// this page load and kept only in memory (nothing is stored in the browser), format-checked here (lowercase letters, digits, hyphens) and
+// checked again by the server. A visit without a tag simply sends nothing, and the request is saved as "Unknown".
+const guideTag=(()=>{try{const q=(new URLSearchParams(location.search).get('guide')||'').trim().toLowerCase();return /^[a-z0-9][a-z0-9-]{1,59}$/.test(q)?q:''}catch{return ''}})();
 // The server uses Turnstile when automatic registration is configured. Until then,
 // customers can still SEND a trial request via the existing verified support channels.
 // Never claim a database registration or email was sent for the manual route.
@@ -508,7 +511,7 @@ $('#tf').addEventListener('submit',async e=>{
  const button=$('#trial-submit'),label='Request Free Trial';trialSubmitting=true;button.disabled=true;button.textContent='Sending your request…';
  try{
   const response=await fetch(trialConfig.supabaseUrl.replace(/\/$/,'')+'/functions/v1/trial-request',{
-   method:'POST',headers:{'content-type':'application/json','apikey':trialConfig.supabaseAnonKey},body:JSON.stringify({...details,turnstile:token})});
+   method:'POST',headers:{'content-type':'application/json','apikey':trialConfig.supabaseAnonKey},body:JSON.stringify({...details,...(guideTag?{guide:guideTag}:{}),turnstile:token})});
   let result={};try{result=await response.json()}catch{}
   if(response.status===503){showTrialConfirmation(details,{saved:false});return} // requests paused: nothing was saved, use chat
   if(!response.ok||!result.ok){const er=Error(result.error||'');er.code=result.code||'';er.retryAfter=Number(result.retry_after)||Number(response.headers.get('retry-after'))||0;throw er}
@@ -528,8 +531,6 @@ $('#tf').addEventListener('submit',async e=>{
  }finally{trialSubmitting=false;button.disabled=false;button.textContent=label}
 });
 CFG.compare.forEach(([f,a,b])=>{const r=el("tr");r.append(el("td",0,f),el("td","us",a),el("td",0,b));$("#ct tbody").append(r)});
-/* reviews */
-CFG.reviews.forEach(([n,m,t])=>{const c=el("div","card glass rv"),w=el("div","who"),i=el("div","av",n[0]),d=el("div");d.append(el("b",0,n),el("span",0,m));w.append(i,d);c.append(el("p","quote","“"+t+"”"),w);$("#rvg").append(c)});
 /* promo */
 if(CFG.promo.on){setTimeout(()=>{let seen=false;try{seen=sessionStorage.getItem("tp")}catch{}if(seen||$("#mod").classList.contains("open")||/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)||(r=>r.top<innerHeight&&r.bottom>0)($("#trial").getBoundingClientRect()))return;try{sessionStorage.setItem("tp","1")}catch{}
 const msg=`Hello Tellyro Support,\n\nI’m a new customer and I’d like to claim the ${CFG.promo.pct}% welcome discount.\n\nPlease help me get started.\n\nThank you!`;

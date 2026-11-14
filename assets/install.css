@@ -18,7 +18,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible
 .guides{padding:14px 0 64px}
 .pick-h{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8fd1ff;margin:0 0 12px}
 /* Device picker */
-.picker{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:0 0 26px}
+.picker{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 26px}
 .tile{display:flex;flex-direction:column;align-items:flex-start;gap:12px;border:1px solid var(--line);border-radius:18px;min-height:118px;padding:16px 14px;background:var(--glass);color:#e5efff;text-align:left;transition:border-color .2s,background .2s,transform .2s,box-shadow .2s}
 .t-ic{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:rgba(62,166,255,.1);border:1px solid rgba(62,166,255,.22);color:#8dcaff;flex:none}.t-ic .i{width:22px;height:22px}
 .t-tx{display:flex;flex-direction:column;gap:2px}.tile strong{font-weight:750;font-size:13.5px;line-height:1.35}.tile small{color:var(--mut);font-size:12px;font-weight:600}
@@ -75,6 +75,24 @@ button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible
 .btn.wa:hover{background:linear-gradient(180deg,#6dbeff,#47abff 55%,#3399f2)}
 @media(hover:hover){.btn:hover{transform:translateY(-2px)}}
 .msg-s{margin:10px 0 0;min-height:1.4em;font-size:13.5px;color:#c9daf0}.msg-s.ok{color:#8ff0c4}
+/* Links to the Troubleshooting Blog (static, crawlable) */
+.blogguides{padding:0 0 56px;max-width:860px}
+.blogguides h2{font-size:25px;letter-spacing:-.03em;margin:0 0 8px}
+.blogguides>p{color:#adbed6;font-size:14px;line-height:1.7;margin:0 0 16px}
+.blogguides ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.blogguides li a{display:block;border:1px solid var(--line);border-radius:14px;background:var(--glass);padding:14px 18px;font-size:15px;font-weight:700;line-height:1.45;text-decoration:none;color:var(--text)}
+.blogguides li a:hover{border-color:rgba(255,255,255,.3)}
+.blogguides li a span{display:block;color:#adbed6;font-size:13.5px;font-weight:400;line-height:1.6;margin-top:3px}
+.blogguides .all{display:inline-block;margin-top:14px;padding:6px 0;color:#a3cfff;font-size:14px;font-weight:650}
+/* About page */
+.about{padding:0 0 80px;max-width:860px}
+.about h2{font-size:25px;letter-spacing:-.03em;margin:38px 0 10px}
+.about h2:first-child{margin-top:8px}
+.about p,.about li{color:#adbed6;font-size:15px;line-height:1.75}
+.about p{margin:0 0 14px}
+.about ol{padding-left:22px;margin:0 0 14px}.about li{margin:6px 0}
+.about a:not(.btn){color:#a3cfff}
+.about .acts{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0 18px}
 /* FAQ */
 .faq{padding:0 0 90px;max-width:860px}
 .faq h2{font-size:25px;letter-spacing:-.03em;margin:0 0 16px}
